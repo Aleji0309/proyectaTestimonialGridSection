@@ -1,0 +1,154 @@
+:root {
+    --font-family: "Barlow Semi Condensed", sans-serif;
+    --font-young: "Young", sans-serif;
+    /* Neutral */
+    --white: hsl(0, 0%, 100%);
+    --grey-100: hsl(214, 17%, 92%);
+    --grey-200: hsl(0, 0%, 81%);
+    --grey-400: hsl(224, 10%, 45%);
+    --grey-500: hsl(217, 19%, 35%);
+    --dark-blue: hsl(219, 29%, 14%);
+    --black: hsl(0, 0%, 7%);
+
+    /* Primary */
+    --purple-50: hsl(260, 100%, 95%);
+    --purple-300: hsl(264, 82%, 80%);
+    --purple-500: hsl(263, 55%, 52%);
+
+    /* Body Copy 
+       Font size: 13px 
+       
+       Font 
+       Family: 'Barlow Semi Condensed' (https://fonts.google.com/specimen/Barlow+Semi+Condensed)
+       Weights: 500, 600
+    */
+}
+
+/* Eliminar el modelo caja de css para medidas */
+
+html {
+    font-size: 62.5%;
+    box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+body {
+    background-color: var(--grey-100);
+    font-family: var(--font-family);
+    line-height: 1.6;
+}
+
+.main {
+    max-width: 1110px;
+    margin: 0 auto;
+    padding: 5rem 2rem;
+}
+
+.testimonial-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+
+}
+
+.testimonial-card {
+    padding: 1.2rem;
+    align-items: center;
+    border-radius: 2%;
+    box-shadow: 6px 15px 62px 0px rgba(209, 209, 209, 0.81);
+    -webkit-box-shadow: 6px 15px 62px 0px rgba(209, 209, 209, 0.81);
+    -moz-box-shadow: 6px 15px 62px 0px rgba(209, 209, 209, 0.81);
+}
+
+.testimonial-card img {
+    border-radius: 50%;
+}
+
+.testimonial-content {
+    display: flex;
+    gap: 2rem;
+
+}
+
+.personal-info .name {
+    font-size: 1.8rem;
+    font-weight: 100;
+    margin: 0;
+}
+
+.personal-info .position {
+    font-size: 1.97rem;
+    font-weight: 300;
+    margin: 0;
+}
+
+.testimonial-text {
+    font-size: 1.8rem;
+}
+
+.testimonial-quote {
+    font-size: 1.5rem;
+    font-weight: 100;
+}
+
+.purple-card {
+    grid-column: 1 / span 2;
+}
+
+.grey-card {
+    grid-column: 3;
+}
+
+.dark-blue-card {
+    grid-column: 2 / span 2;
+}
+
+.testimonial-card:last-child {
+    grid-column: 4;
+    grid-row: 1 / span 2;
+}
+
+
+.purple-card {
+    background-color: var(--purple-500);
+    color: var(--white);
+}
+
+.grey-card {
+    background-color: var(--grey-500);
+    color: var(--white);
+}
+
+
+.white-card {
+    background-color: var(--white);
+    color: var(--dark-blue);
+}
+
+.dark-blue-card {
+    background-color: var(--dark-blue);
+    color: var(--white);
+}
+
+
+
+
+/* Media Queries */
+
+/*Celular*/
+@media (max-width: 600px) {
+    .testimonial-grid {
+        grid-template-columns: 1fr;
+    }
+
+
+    .testimonial-card {
+        grid-column: auto !important;
+        grid-row: auto !important;
+    }
+}
